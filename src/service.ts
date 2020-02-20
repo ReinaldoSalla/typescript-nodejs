@@ -6,8 +6,8 @@ import { checkValidation } from "./utils/check-validation";
 
 export class Service {
     public renderWelcomeMessage(req: Request, res: Response): void {
+        console.log("GET method for base route");
         res.status(200).send("REST API implemented with TypeScript and NodeJS");
-        console.log("GET method for base route")
     }
 
     public getOneNegotiation(req: Request, res: Response): void {
@@ -28,42 +28,8 @@ export class Service {
     }
 
     public postNewNegotiation(req: Request, res: Response): void {
-        /*
-        Validations: 
-        year must be 2020
-        amount has to be bigger then 1
-        value has to be bigger then 10
-        description must have more then 10 chars
-        */
-        const _errors = checkValidation(req)
-        
-        const isDateValid: boolean = req.body.date.slice(0, 4) === "2020" ? true : false
-        const isAmountValid: boolean = req.body.amount > 1 ? true : false
-        const isValueValid: boolean = req.body.value > 10 ? true : false
-        const isDescriptionValid: boolean = req.body.description.length > 10 ? true : false
-        const validations = [{
-                name: "date",
-                msg: "The year should be 2020",
-                isValid: isDateValid
-            }, {
-                name: "amount",
-                msg: "Amount must be at least 1",
-                isValid: isAmountValid
-            }, {
-                name: "value",
-                msg: "Value must be at least 10",
-                isValid: isValueValid
-            }, {
-                name: "description",
-                msg: "Description must be at least 10 characters long",
-                isValid: isDescriptionValid
-            }
-        ];
-        const errors = validations.filter(field => !field.isValid);
-        const checkErrors = errors.length;
-        if(checkErrors) {
-            console.log("POST canceled");
-            console.log(errors)
+        const errors = checkValidation(req)
+        if(errors.length) {
             res.status(httpStatus.badRequest).json(errors);
        } else {
             const negotiationModel = new NegotiationModel(req.body);
@@ -73,14 +39,6 @@ export class Service {
                 res.status(httpStatus.created).json(negotiation);
             });
        }
-        /*
-        const negotiationModel = new NegotiationModel(req.body);
-        negotiationModel.save((err: Error, negotiation: MongooseDocument) => {
-            if(err) res.status(httpStatus.badRequest).send(err);
-            console.log("POST method for a new negotiation");
-            res.status(httpStatus.created).json(negotiation);
-        });
-        */
     }
 
     public postNewNegotiationWithDate(req: Request, res: Response): void {

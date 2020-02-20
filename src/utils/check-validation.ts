@@ -1,3 +1,11 @@
+/*
+Validations: 
+    year must be 2020
+    amount has to be at least 1
+    value has to be at least 10
+    description must be at least 10 characters long
+*/
+
 import { Request } from "express";
 
 export function checkValidation(req: Request) {
