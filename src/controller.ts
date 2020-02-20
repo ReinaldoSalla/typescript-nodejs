@@ -11,11 +11,11 @@ export class Controller {
   
     public configRoutes() {
       this.app.route("/").get(this.service.renderWelcomeMessage);
+      this.app.route("/negotiation/:id").get(this.service.getOneNegotiation);
       this.app.route("/negotiations").get(this.service.getAllNegotiations);
-      this.app.route("/negotiation").post(this.service.addNewNegotiation);
-      this.app
-        .route("/negotiation/:id")
-        .put(this.service.updateNegotiation)
-        .delete(this.service.deleteNegotiation);
+      this.app.route("/negotiation").post(this.service.postNewNegotiation);
+      this.app.route("/negotiationWithDate").post(this.service.postNewNegotiationWithDate);
+      this.app.route("/negotiation/:id").put(this.service.putNegotiation);
+      this.app.route("/negotiation/:id").delete(this.service.deleteNegotiation);
     }
 }
