@@ -1,4 +1,4 @@
-interface HttpStatues {
+interface HttpStatus {
     ok: number,
     created: number,
     noContentUpdated: number,
@@ -6,7 +6,7 @@ interface HttpStatues {
     badRequest: number
 }
 
-export const httpStatus: HttpStatues = {
+export const httpStatus: HttpStatus = {
     ok: 200,
     noContentUpdated: 200,
     noContentDeleted: 200,

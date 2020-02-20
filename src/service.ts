@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { MongooseDocument } from "mongoose";
 import { NegotiationModel } from "./model";
 import { httpStatus } from "./http-status";
+import { checkValidation } from "./utils/check-validation";
 
 export class Service {
     public renderWelcomeMessage(req: Request, res: Response): void {
@@ -34,49 +35,52 @@ export class Service {
         value has to be bigger then 10
         description must have more then 10 chars
         */
-        /*
-        const date: Date = req.body.date;
-        const amount: number = req.body.amount;
-        const value: number = req.body.value;
-        const description: string = req.body.description;
-        if(value > 1000) console.log("value was bigger then 1000");
-        */
-       /*
-        let msgs = [];
-        let flagError = false;
-        if(req.body.amount < 1) {
-            msgs.push("Amount must be at least 1");
-            flagError = true;
-        }
-        if(req.body.value < 10) {
-            msgs.push("Value must be at least 10"); 
-            flagError = true;
-        }
-        if(req.body.description.length < 10) {
-            msgs.push("Description must have at least 10 characters");
-            flagError = true
-        }
-        if(flagError) {
+        const _errors = checkValidation(req)
+        
+        const isDateValid: boolean = req.body.date.slice(0, 4) === "2020" ? true : false
+        const isAmountValid: boolean = req.body.amount > 1 ? true : false
+        const isValueValid: boolean = req.body.value > 10 ? true : false
+        const isDescriptionValid: boolean = req.body.description.length > 10 ? true : false
+        const validations = [{
+                name: "date",
+                msg: "The year should be 2020",
+                isValid: isDateValid
+            }, {
+                name: "amount",
+                msg: "Amount must be at least 1",
+                isValid: isAmountValid
+            }, {
+                name: "value",
+                msg: "Value must be at least 10",
+                isValid: isValueValid
+            }, {
+                name: "description",
+                msg: "Description must be at least 10 characters long",
+                isValid: isDescriptionValid
+            }
+        ];
+        const errors = validations.filter(field => !field.isValid);
+        const checkErrors = errors.length;
+        if(checkErrors) {
             console.log("POST canceled");
-            msgs.forEach(msg => console.log(msg));
-            res.status(400).send("POST canceled");
-        } else {
+            console.log(errors)
+            res.status(httpStatus.badRequest).json(errors);
+       } else {
             const negotiationModel = new NegotiationModel(req.body);
             negotiationModel.save((err: Error, negotiation: MongooseDocument) => {
                 if(err) res.status(httpStatus.badRequest).send(err);
                 console.log("POST method for a new negotiation");
                 res.status(httpStatus.created).json(negotiation);
             });
-        }
-        */
-        
+       }
+        /*
         const negotiationModel = new NegotiationModel(req.body);
         negotiationModel.save((err: Error, negotiation: MongooseDocument) => {
             if(err) res.status(httpStatus.badRequest).send(err);
             console.log("POST method for a new negotiation");
             res.status(httpStatus.created).json(negotiation);
         });
-        
+        */
     }
 
     public postNewNegotiationWithDate(req: Request, res: Response): void {
