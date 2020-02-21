@@ -1,0 +1,10 @@
+{"message":"GET method for negotiation with id = 5e4fbf65c999b63570ba3913","level":"info","service":"test-service","datetime":"10:52:5 - 21/1/2020"}
+{"message":"GET method for negotiation with id = 5e4fbf65c999b63570ba3913","level":"info","service":"test-service","datetime":"10:52:5 - 21/1/2020"}
+{"message":"GET method for negotiation with id = 5e4fbf65c999b63570ba3913","level":"info","service":"test-service","datetime":"10:54:39 - 21/1/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"11:1:24 - 21/1/2020"}
+{"message":"GET method for negotiation with id = 5e4e892def42b335186268be","level":"info","service":"test-service","datetime":"11:1:24 - 21/1/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"11:1:24 - 21/1/2020"}
+{"message":"PUT method for negotiation with id 5e4fe2f4830c971f4cd1bb13","level":"info","service":"test-service","datetime":"11:1:24 - 21/1/2020"}
+{"message":"PATCH method for a negotiations with id 5e4fe2f4830c971f4cd1bb13","level":"info","service":"test-service","datetime":"11:1:24 - 21/1/2020"}
+{"message":"DELETE method for negotiation with id 5e4fe2f4830c971f4cd1bb13","level":"info","service":"test-service","datetime":"11:1:24 - 21/1/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"11:1:24 - 21/1/2020"}

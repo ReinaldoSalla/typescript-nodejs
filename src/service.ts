@@ -3,6 +3,7 @@ import { MongooseDocument } from "mongoose";
 import { NegotiationModel } from "./model";
 import { httpStatus } from "./http-status";
 import { checkValidation } from "./utils/check-validation";
+import { logger } from "./logger";
 
 export class Service {
     public renderWelcomeMessage(req: Request, res: Response): void {
@@ -11,8 +12,9 @@ export class Service {
     }
 
     public getOneNegotiation(req: Request, res: Response): void {
-        const negotiationId = req.params.id;
-        console.log(`GET method for negotiation with id = ${negotiationId}`);
+        const negotiationId: string = req.params.id;
+        const msg: string = `GET method for negotiation with id = ${negotiationId}`;
+        logger.info(msg); console.log(msg);
         NegotiationModel.findById(negotiationId, (err: Error, negotiationFounded: any) => {
             if(err) res.status(httpStatus.badRequest).send(err);
             res.status(httpStatus.ok).json(negotiationFounded);
@@ -22,7 +24,8 @@ export class Service {
     public getAllNegotiations(req: Request, res: Response): void {
         NegotiationModel.find({}, (err: Error, negotiation: MongooseDocument) => {
             if(err) res.status(httpStatus.badRequest).send(err);
-            console.log("GET method for all negotiations");
+            const msg: string = "GET method for all negotiations";
+            logger.info(msg); console.log(msg);
             res.status(httpStatus.ok).json(negotiation);
         });
     }
@@ -35,7 +38,8 @@ export class Service {
             const negotiationModel = new NegotiationModel(req.body);
             negotiationModel.save((err: Error, negotiation: MongooseDocument) => {
                 if(err) res.status(httpStatus.badRequest).send(err);
-                console.log("POST method for a new negotiation");
+                const msg: string = "POST method for a new negotiation"
+                logger.info(msg); console.log(msg);
                 res.status(httpStatus.created).json(negotiation);
             });
        }
@@ -51,27 +55,45 @@ export class Service {
         const negotiationModelWithDate = {...req.body, date};
         negotiationModel.save((err: Error, negotiation: MongooseDocument) => {
             if(err) res.status(httpStatus.badRequest).send(err);
-            console.log("POST method for a new negotiation with a predetermined date");
+            const msg: string = "POST method for a new negotiation with a predetermined date";
+            logger.info(msg); console.log(msg);
             res.status(httpStatus.created).json(negotiationModelWithDate);
         });
     }
 
     public putNegotiation(req: Request, res: Response): void {
+        /*
+        It sends the previus data, not the updated data
+        Thus, negotiationUpdated hold the last not the new
+        */
         const negotiationId = req.params.id;
-        console.log(`PUT method for negotiation with id ${negotiationId}`);
-        NegotiationModel.findByIdAndUpdate(negotiationId, req.body, (err: Error, negotiationUpdated: any) => {
+        let msg = `PUT method for negotiation with id ${negotiationId}`;
+        logger.info(msg); console.log(msg);
+        NegotiationModel.findByIdAndUpdate(negotiationId, req.body, (err: Error, updated: any) => {
             if(err) res.status(httpStatus.badRequest).send(err);
-            const msg = negotiationUpdated ? "Updated sucessfully" : "Negotiation not found";
-            res.status(httpStatus.noContentUpdated).json(negotiationUpdated);
+            msg = updated ? "Updated sucessfully" : "Negotiation not found";
+            res.status(httpStatus.noContentDeleted).send(msg);
         });
+    }
+
+    public patchNegotiation(req: Request, res: Response): void {
+        const negotiationId = req.params.id;
+        let msg = `PATCH method for a negotiations with id ${negotiationId}`;
+        logger.info(msg); console.log(msg);
+        NegotiationModel.findByIdAndUpdate(negotiationId, req.body, (err: Error, updated: any) => {
+            if(err) res.status(httpStatus.badRequest).send(err);
+            msg = updated ? "Updated sucessfully" : "Negotiation not found";
+            res.status(httpStatus.noContentDeleted).send(msg);
+        })
     }
 
     public deleteNegotiation(req: Request, res: Response): void {
         const negotiationId = req.params.id;
-        console.log(`DELETE method for negotiation with id ${negotiationId}`);
+        let msg = `DELETE method for negotiation with id ${negotiationId}`;
+        logger.info(msg); console.log(msg);
         NegotiationModel.findByIdAndDelete(negotiationId, (err: Error, deleted: any) => {
             if(err) res.status(httpStatus.badRequest).send(err);
-            const msg = deleted ? "Deleted sucessfully" : "Negotiation not found";
+            msg = deleted ? "Deleted sucessfully" : "Negotiation not found";
             res.status(httpStatus.noContentDeleted).send(msg);
         });
     }

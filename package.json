@@ -14,7 +14,8 @@
     "express": "^4.17.1",
     "express-validator": "^6.4.0",
     "moment": "^2.24.0",
-    "mongoose": "^5.9.1"
+    "mongoose": "^5.9.1",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.0",
@@ -23,6 +24,7 @@
     "@types/express-validator": "^3.0.0",
     "@types/moment": "^2.13.0",
     "@types/mongoose": "^5.7.1",
+    "@types/winston": "^2.4.4",
     "nodemon": "^2.0.2",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5"

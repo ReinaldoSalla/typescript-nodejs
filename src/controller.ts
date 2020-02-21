@@ -16,6 +16,7 @@ export class Controller {
       this.app.route("/negotiation").post(this.service.postNewNegotiation);
       this.app.route("/negotiationWithDate").post(this.service.postNewNegotiationWithDate);
       this.app.route("/negotiation/:id").put(this.service.putNegotiation);
+      this.app.route("/negotiation/:id").patch(this.service.patchNegotiation);
       this.app.route("/negotiation/:id").delete(this.service.deleteNegotiation);
     }
 }
