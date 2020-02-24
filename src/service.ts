@@ -2,8 +2,9 @@ import { Request, Response } from "express";
 import { MongooseDocument } from "mongoose";
 import { NegotiationModel } from "./model";
 import { httpStatus } from "./http-status";
-import { checkValidation } from "./utils/check-validation";
 import { logger } from "./logger";
+import { check, validationResult } from "express-validator";
+import { checkValidation } from "./utils/check-validation";
 
 export class Service {
     public renderWelcomeMessage(req: Request, res: Response): void {
@@ -71,7 +72,7 @@ export class Service {
         logger.info(msg); console.log(msg);
         NegotiationModel.findByIdAndUpdate(negotiationId, req.body, (err: Error, updated: any) => {
             if(err) res.status(httpStatus.badRequest).send(err);
-            msg = updated ? "Updated sucessfully" : "Negotiation not found";
+            msg = updated ? "Updated sucessfully through PUT method" : "Negotiation not found";
             res.status(httpStatus.noContentDeleted).send(msg);
         });
     }
@@ -82,7 +83,7 @@ export class Service {
         logger.info(msg); console.log(msg);
         NegotiationModel.findByIdAndUpdate(negotiationId, req.body, (err: Error, updated: any) => {
             if(err) res.status(httpStatus.badRequest).send(err);
-            msg = updated ? "Updated sucessfully" : "Negotiation not found";
+            msg = updated ? "Updated sucessfully through PUTCH" : "Negotiation not found";
             res.status(httpStatus.noContentDeleted).send(msg);
         })
     }

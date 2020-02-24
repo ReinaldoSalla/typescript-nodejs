@@ -17,9 +17,9 @@ class App {
     }
 
     private configMiddlewares(): void {
-        this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({ extended: true }));
-        this.app.use(cors());
+        this.app.use(bodyParser.json());
+        //this.app.use(cors());
     }
 
     private configMongo(): void {
@@ -29,7 +29,7 @@ class App {
             useNewUrlParser: true,
             useUnifiedTopology: true 
         });
-        db.on("error", console.error.bind(console, "Connectino error with MongoDB"));
+        db.on("error", console.error.bind(console, "Connection error with MongoDB"));
         console.log(`MongoDB connected. URL: ${dbUrl}`);
     }
 }

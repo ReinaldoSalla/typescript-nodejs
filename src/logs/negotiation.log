@@ -8,3 +8,63 @@
 {"message":"PATCH method for a negotiations with id 5e4fe2f4830c971f4cd1bb13","level":"info","service":"test-service","datetime":"11:1:24 - 21/1/2020"}
 {"message":"DELETE method for negotiation with id 5e4fe2f4830c971f4cd1bb13","level":"info","service":"test-service","datetime":"11:1:24 - 21/1/2020"}
 {"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"11:1:24 - 21/1/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"11:11:54 - 21/1/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"11:11:54 - 21/1/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"11:11:54 - 21/1/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"11:42:41 - 21/1/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"11:54:42 - 21/1/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"11:54:42 - 21/1/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"11:54:42 - 21/1/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"11:54:42 - 21/1/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:20:9 - 24/1/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"8:20:9 - 24/1/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"8:20:9 - 24/1/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"8:20:9 - 24/1/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"8:20:9 - 24/1/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:20:9 - 24/1/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:20:9 - 24/1/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"8:20:9 - 24/1/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"8:20:9 - 24/1/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"8:36:15 - 24/1/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:36:15 - 24/1/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"8:36:15 - 24/1/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"8:41:15 - 24/1/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:44:20 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:47:32 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:48:8 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:48:54 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:49:14 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:50:4 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:50:57 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:51:40 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:52:17 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:53:22 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:54:9 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:56:39 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:59:9 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"8:59:48 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"9:0:11 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"9:1:59 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"9:2:29 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"9:5:54 - 24/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"9:7:46 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"9:8:25 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"9:9:53 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"9:17:5 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"9:17:37 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"9:20:14 - 24/2/2020"}
+{"message":"PUT method for negotiation with id 5e53bc9663223208c0ce53e4","level":"info","service":"test-service","datetime":"9:40:12 - 24/2/2020"}
+{"message":"PATCH method for a negotiations with id 5e53bc9663223208c0ce53e4","level":"info","service":"test-service","datetime":"9:40:12 - 24/2/2020"}
+{"message":"PATCH method for a negotiations with id 5e53bc9663223208c0ce53e4","level":"info","service":"test-service","datetime":"9:40:12 - 24/2/2020"}
+{"message":"PATCH method for a negotiations with id 5e53bc9663223208c0ce53e4","level":"info","service":"test-service","datetime":"9:40:12 - 24/2/2020"}
+{"message":"GET method for negotiation with id = 5e53bc9663223208c0ce53e4","level":"info","service":"test-service","datetime":"9:40:12 - 24/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"11:4:45 - 24/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"11:4:45 - 24/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"11:5:59 - 24/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"11:6:17 - 24/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"11:55:17 - 24/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"11:55:17 - 24/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"11:56:19 - 24/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"11:56:19 - 24/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"11:56:19 - 24/2/2020"}
+{"message":"PUT method for negotiation with id 5e53e43c13875e3ef4465080","level":"info","service":"test-service","datetime":"11:56:19 - 24/2/2020"}
