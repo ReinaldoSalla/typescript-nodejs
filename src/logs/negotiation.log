@@ -88,3 +88,57 @@
 {"message":"Error during POST method for route /negotiation","level":"info","service":"test-service","datetime":"14:15:42 - 26/2/2020"}
 {"message":"Error during POST method for route /negotiation","level":"info","service":"test-service","datetime":"14:15:42 - 26/2/2020"}
 {"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:15:42 - 26/2/2020"}
+{"message":"Error during POST method for route /negotiation","level":"info","service":"test-service","datetime":"14:27:41 - 26/2/2020"}
+{"message":"Error during POST method for route /negotiation","level":"info","service":"test-service","datetime":"14:27:41 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:27:41 - 26/2/2020"}
+{"message":"Error during POST method for route /negotiation","level":"info","service":"test-service","datetime":"14:27:41 - 26/2/2020"}
+{"message":"Error during POST method for route /negotiation","level":"info","service":"test-service","datetime":"14:27:41 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:27:41 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:30:36 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:30:36 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:30:36 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:30:36 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:30:36 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:40:20 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:40:56 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:40:56 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:41:57 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:43:7 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:43:7 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:43:7 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:43:7 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:43:7 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:43:7 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:43:7 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:43:7 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:43:7 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:43:7 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:43:7 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:43:7 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:43:7 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:48:51 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:48:51 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:49:22 - 26/2/2020"}
+{"message":"Error during POST method for route /negotiation","level":"info","service":"test-service","datetime":"14:49:22 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:49:22 - 26/2/2020"}
+{"message":"Error during POST method for route /negotiation","level":"info","service":"test-service","datetime":"14:49:22 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:49:22 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:49:22 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:52:50 - 26/2/2020"}
+{"message":"Error during POST method for route /negotiation","level":"info","service":"test-service","datetime":"14:52:50 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:52:50 - 26/2/2020"}
+{"message":"Error during POST method for route /negotiation","level":"info","service":"test-service","datetime":"14:52:50 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:52:50 - 26/2/2020"}
+{"message":"Error during POST method for route /negotiation","level":"info","service":"test-service","datetime":"14:52:50 - 26/2/2020"}
+{"message":"Error during POST method for route /negotiation","level":"info","service":"test-service","datetime":"14:52:50 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"14:52:50 - 26/2/2020"}
+{"message":"GET method for all negotiations","level":"info","service":"test-service","datetime":"14:56:0 - 26/2/2020"}
+{"message":"PUT method for negotiation with id 5e4ebc27dfca23151ce0cbe9","level":"info","service":"test-service","datetime":"14:56:0 - 26/2/2020"}
+{"message":"PUT method for negotiation with id 5e4ebc27dfca23151ce0cbe9","level":"info","service":"test-service","datetime":"15:13:51 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"15:13:51 - 26/2/2020"}
+{"message":"Error during POST method for route /negotiation","level":"info","service":"test-service","datetime":"15:13:51 - 26/2/2020"}
+{"message":"Error during POST method for route /negotiation","level":"info","service":"test-service","datetime":"15:13:51 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"15:13:51 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"15:13:51 - 26/2/2020"}
+{"message":"Error during POST method for route /negotiation","level":"info","service":"test-service","datetime":"15:13:51 - 26/2/2020"}
+{"message":"POST method for a new negotiation","level":"info","service":"test-service","datetime":"15:13:51 - 26/2/2020"}

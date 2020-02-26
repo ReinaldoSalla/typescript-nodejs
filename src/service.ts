@@ -3,7 +3,7 @@ import { MongooseDocument } from "mongoose";
 import { NegotiationModel } from "./model";
 import { httpStatus } from "./http-status";
 import { logger } from "./logger";
-import { check, validationResult } from "express-validator";
+import { validationResult } from "express-validator";
 
 export class Service {
     public renderWelcomeMessage(req: Request, res: Response): void {
@@ -46,34 +46,15 @@ export class Service {
         });
     }
 
-    public postNewNegotiationWithDate(req: Request, res: Response): void {
-        /*
-        It returns with date and without _id and _v in postman
-        But is save the usual way, with the _id and _v and without date
-        */
-        const negotiationModel = new NegotiationModel(req.body);
-        const date = "2010-01-01";
-        const negotiationModelWithDate = {...req.body, date};
-        negotiationModel.save((err: Error, negotiation: MongooseDocument) => {
-            if(err) res.status(httpStatus.badRequest).send(err);
-            const msg: string = "POST method for a new negotiation with a predetermined date";
-            logger.info(msg); console.log(msg);
-            res.status(httpStatus.created).json(negotiationModelWithDate);
-        });
-    }
 
     public putNegotiation(req: Request, res: Response): void {
-        /*
-        It sends the previus data, not the updated data
-        Thus, negotiationUpdated hold the last not the new
-        */
         const negotiationId = req.params.id;
         let msg = `PUT method for negotiation with id ${negotiationId}`;
         logger.info(msg); console.log(msg);
         NegotiationModel.findByIdAndUpdate(negotiationId, req.body, (err: Error, updated: any) => {
             if(err) res.status(httpStatus.badRequest).send(err);
             msg = updated ? "Updated sucessfully through PUT method" : "Negotiation not found";
-            res.status(httpStatus.noContentDeleted).send(msg);
+            res.status(httpStatus.noContentUpdated).send(msg);
         });
     }
 
@@ -84,7 +65,7 @@ export class Service {
         NegotiationModel.findByIdAndUpdate(negotiationId, req.body, (err: Error, updated: any) => {
             if(err) res.status(httpStatus.badRequest).send(err);
             msg = updated ? "Updated sucessfully through PUTCH" : "Negotiation not found";
-            res.status(httpStatus.noContentDeleted).send(msg);
+            res.status(httpStatus.noContentUpdated).send(msg);
         })
     }
 
