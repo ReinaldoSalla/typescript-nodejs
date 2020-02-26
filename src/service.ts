@@ -4,7 +4,6 @@ import { NegotiationModel } from "./model";
 import { httpStatus } from "./http-status";
 import { logger } from "./logger";
 import { check, validationResult } from "express-validator";
-import { checkValidation } from "./utils/check-validation";
 
 export class Service {
     public renderWelcomeMessage(req: Request, res: Response): void {
@@ -31,19 +30,20 @@ export class Service {
         });
     }
 
-    public postNewNegotiation(req: Request, res: Response): void {
-        const errors = checkValidation(req)
-        if(errors.length) {
-            res.status(httpStatus.badRequest).json(errors);
-       } else {
-            const negotiationModel = new NegotiationModel(req.body);
-            negotiationModel.save((err: Error, negotiation: MongooseDocument) => {
-                if(err) res.status(httpStatus.badRequest).send(err);
-                const msg: string = "POST method for a new negotiation"
-                logger.info(msg); console.log(msg);
-                res.status(httpStatus.created).json(negotiation);
-            });
-       }
+    public postNewNegotiation(req: Request, res: Response): any {
+        const errors = validationResult(req);
+        if(!errors.isEmpty()) {
+            const msg: string = "Error during POST method for route /negotiation"
+            logger.info(msg); console.log(msg);
+            return res.status(httpStatus.unprocessableEntity).json({ errors: errors.array() });
+        }
+        const negotiationModel = new NegotiationModel(req.body);
+        negotiationModel.save((err: Error, negotiation: MongooseDocument) => {
+            if(err) res.status(httpStatus.badRequest).send(err);
+            const msg: string = "POST method for a new negotiation"
+            logger.info(msg); console.log(msg);
+            res.status(httpStatus.created).json(negotiation);
+        });
     }
 
     public postNewNegotiationWithDate(req: Request, res: Response): void {

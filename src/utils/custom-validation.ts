@@ -50,10 +50,9 @@ export function checkValidation(req: Request) {
     return validations.filter(field => !field.isValid);
 }
 
-// To check is a paricular field is missing in the JSON body, or if it is a empty string
+// Optimized version to check is a paricular field is missing in the JSON body, or if it is a empty string
 /*
 export function checkValidation(req: Request) {
-
     var isDateValid: boolean = false;
     var isAmountValid: boolean = false;
     var isValueValid: boolean = false;
@@ -133,5 +132,23 @@ export function checkValidation(req: Request) {
     ];
 
     return validations.filter(field => !field.isValid);
+}
+*/
+
+// This is how checkValidation can be called in service.ts
+/*
+public postNewNegotiation(req: Request, res: Response): void {
+    const errors = checkValidation(req)
+    if(errors.length) {
+        res.status(httpStatus.badRequest).json(errors);
+    } else {
+        const negotiationModel = new NegotiationModel(req.body);
+        negotiationModel.save((err: Error, negotiation: MongooseDocument) => {
+            if(err) res.status(httpStatus.badRequest).send(err);
+            const msg: string = "POST method for a new negotiation"
+            logger.info(msg); console.log(msg);
+            res.status(httpStatus.created).json(negotiation);
+        });
+    }
 }
 */
